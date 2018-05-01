@@ -16,4 +16,5 @@ for name, info in knight_info.items():
     print(info[0], name) 
 
 print()
-print(knight_info['Robin'][2]) 
+print(knight_info['Robin'])
+print(knight_info['Robin'][2])
