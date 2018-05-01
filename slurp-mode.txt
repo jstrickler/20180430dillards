@@ -1,0 +1,3 @@
+python -c "print('\n\n'.join([p for p in open('DATA/parrot.txt').read().split('\n\n') if 'parrot' in p.lower()]))"
+
+cat DATA/alice.txt | python -c "import sys;print('\n\n'.join([p for p in sys.stdin.read().split('\n\n') if 'lizard' in p.lower()]))"
