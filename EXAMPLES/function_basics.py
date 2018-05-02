@@ -14,11 +14,18 @@ h = get_hello()   # <5>
 print(h)
 print()
 
-def sqrt(n):   # <6>
-    return n ** .5
-
+def sqrt(n: int) -> float   # <6>
+    if isinstance(n, (int, float)):
+        return float(n) ** .5
+    else:
+        raise ValueError("What the heck??")
 
 m = sqrt(1234) # <7>
 n = sqrt(2)
 
 print("m is {:.3f} n is {:.3f}".format(m, n))
+
+try:
+    x = sqrt('wombat')
+except Exception as err:
+    print(err)
